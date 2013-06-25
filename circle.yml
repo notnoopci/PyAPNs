@@ -1,3 +1,9 @@
 machine:
     python:
         version: 2.7.5
+
+test:
+    pre:
+        - which python
+        - echo $PATH
+        - export
