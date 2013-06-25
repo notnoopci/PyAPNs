@@ -7,3 +7,4 @@ test:
         - which python
         - echo $PATH
         - export
+        - python -c "import sys; print sys.path"
