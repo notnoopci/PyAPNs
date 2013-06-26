@@ -1,1 +1,2 @@
 simplejson==2.6.1 # Not required on Python 2.6+
+git+https://github.com/dfuentes77/coveralls-python@use_circle_branch#egg=coveralls
