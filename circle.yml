@@ -8,3 +8,7 @@ test:
         - echo $PATH
         - export
         - python -c "import sys; print sys.path"
+
+branches:
+    ignore:
+        - develop
