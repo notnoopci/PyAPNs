@@ -1,10 +1,16 @@
-#machine:
-#    python:
-#        version: 2.7.4
-#
+machine:
+    python:
+        version: 2.7.3
+    post:
+        - "curl -o ~/virtualenv.tar.gz https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.10.tar.gz && tar -xzvf ~/virtualenv.tar.gz -C ~ && ln -n ~/virtualenv-1.10/virtualenv.py ~/virtualenv-1.10/virtualenv && echo 'export PATH=~/virtualenv-1.10:$PATH' >> ~/.circlerc"
+
 test:
     pre:
         - which python
         - echo $PATH
         - export
         - python -c "import sys; print sys.path"
+
+branches:
+    ignore:
+        - develop
